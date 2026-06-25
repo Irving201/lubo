@@ -1,36 +1,59 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1"style="text-align: center;">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta charset="UTF-8">
 <title> COCKTAILS </title>
 
 <style>
+
 body {
     margin: 0;
-    font-family: Arial;
+    font-family: Arial, sans-serif;
     background: linear-gradient(135deg, #0c1429, #c0c9c7);
     color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    height: auto;
-    display: block;
-    padding: 80px;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .card {
-    background: rgba(255,255,255,0.1);
-    padding: 25px;
-    border-radius: 20px;
-    backdrop-filter: blur(10px);
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 15px auto;
+}
+
+.logo {
+    width: 280px;
+    max-width: 80%;
+    border-radius: 50%;
+}
 
 h1 {
-    color: #000000;
-    text-shadow: 0 0 10px #ffffff;
-    padding: 30px;
+    color: #000;
+    text-shadow: 0 0 10px #fff;
+    padding: 15px;
+    font-size: clamp(24px, 4vw, 38px);
 }
 
+h3 {
+    color: #000;
+    text-shadow: 0 0 10px #fff;
+    padding: 15px;
+    font-family: Georgia, serif;
+    font-size: clamp(18px, 3vw, 28px);
+}
 
 .cupon {
     font-size: 28px;
@@ -40,36 +63,36 @@ h1 {
     margin: 15px 0;
     letter-spacing: 3px;
 }
-h3 {
-    color: #000000;
-    text-shadow: 0 0 10px #ffffff;
-    padding: 30px;
-        font-family: 'Georgia', sans-serif;
-        
-}
+
 button {
-    padding: 12px 20px;
+    padding: 15px 25px;
     background: #424242;
-    font-family: 'Copperplate', 'Papyrus', fantasy;
     color: white;
     border-radius: 10px;
-    font-size: 16px;
-
+    font-size: 18px;
     cursor: pointer;
+    border: none;
 }
+
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+}
+
 </style>
 </head>
 
 <body>
 
 <div class="card">
-    <img src="logo.png" width="280" style="border-radius:50%">
+    <img src="logo.png" class="logo">
     <br></br>
-    <br></br>
+
 
     <h1>Bienvenido al menú de cocteleria de Lubo</h1>
 <br></br>
-<br></br>
+
 
     <img src="1.png" >
     <br></br>
@@ -83,13 +106,15 @@ button {
     <br></br>
  
  
-
-
     <h3> TE ESPERAMOS EN: 👇👇</h3>
 
     <button onclick="irMapa()">📍 L U B O </button>
+<footer> <!--Pie de pag-->
+            <p> Lubo Services 2026 © Todos los derechos reservados.</p>
+        </footer>
+
 </div>
-<!-- MINI TATUAJE GRATIS -->
+
 <script>
 // Generar código único
 function generarCupon() {
@@ -111,11 +136,6 @@ function irMapa(){
 }
 </script>
 
- <footer> <!--Pie de pag-->
-            <p> Lubo Services 2026 © Todos los derechos reservados.</p>
-        </footer>
-
-
-
 </body>
+ 
 </html>
